@@ -63,7 +63,11 @@ namespace Bitcoin_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(bitcoinCurrency.Text.ToString() == "EUR" || bitcoinCurrency.Text.ToString() == "EEK")
+            if(bitcoinInput.Text.ToString() == "")
+            {
+                MessageBox.Show("Palun sisesta arv bitcoinides!");
+            }
+             else if (bitcoinCurrency.Text.ToString() == "EUR" || bitcoinCurrency.Text.ToString() == "EEK")
             {
                 resultLabel.Visible = true;
                 tulemusLabel.Visible = true;
