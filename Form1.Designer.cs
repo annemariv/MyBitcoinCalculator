@@ -43,8 +43,9 @@
             this.bitcoinCurrency.Items.AddRange(new object[] {
             "EUR",
             "USD",
+            "GBP",
             "EEK"});
-            this.bitcoinCurrency.Location = new System.Drawing.Point(310, 133);
+            this.bitcoinCurrency.Location = new System.Drawing.Point(337, 133);
             this.bitcoinCurrency.Name = "bitcoinCurrency";
             this.bitcoinCurrency.Size = new System.Drawing.Size(121, 28);
             this.bitcoinCurrency.TabIndex = 0;
@@ -53,9 +54,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.Location = new System.Drawing.Point(310, 167);
+            this.button1.Location = new System.Drawing.Point(319, 179);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 32);
+            this.button1.Size = new System.Drawing.Size(150, 32);
             this.button1.TabIndex = 1;
             this.button1.Text = "Arvuta kurss";
             this.button1.UseVisualStyleBackColor = false;
@@ -63,7 +64,7 @@
             // 
             // bitcoinInput
             // 
-            this.bitcoinInput.Location = new System.Drawing.Point(310, 101);
+            this.bitcoinInput.Location = new System.Drawing.Point(346, 101);
             this.bitcoinInput.Name = "bitcoinInput";
             this.bitcoinInput.Size = new System.Drawing.Size(100, 26);
             this.bitcoinInput.TabIndex = 2;
@@ -75,7 +76,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(305, 73);
+            this.label1.Location = new System.Drawing.Point(306, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 22);
             this.label1.TabIndex = 3;
@@ -86,7 +87,7 @@
             this.tulemusLabel.AutoSize = true;
             this.tulemusLabel.BackColor = System.Drawing.Color.Transparent;
             this.tulemusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tulemusLabel.Location = new System.Drawing.Point(306, 221);
+            this.tulemusLabel.Location = new System.Drawing.Point(355, 241);
             this.tulemusLabel.Name = "tulemusLabel";
             this.tulemusLabel.Size = new System.Drawing.Size(76, 20);
             this.tulemusLabel.TabIndex = 4;
@@ -98,9 +99,9 @@
             this.resultLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.resultLabel.Location = new System.Drawing.Point(309, 244);
+            this.resultLabel.Location = new System.Drawing.Point(221, 264);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(134, 59);
+            this.resultLabel.Size = new System.Drawing.Size(351, 59);
             this.resultLabel.TabIndex = 5;
             this.resultLabel.Text = "pole";
             this.resultLabel.TextChanged += new System.EventHandler(this.textBox2_TextChanged);

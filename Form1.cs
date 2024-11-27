@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,14 +63,47 @@ namespace Bitcoin_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(bitcoinCurrency.SelectedItem.ToString() == "EUR")
+            if(bitcoinCurrency.Text.ToString() == "EUR" || bitcoinCurrency.Text.ToString() == "EEK")
             {
                 resultLabel.Visible = true;
                 tulemusLabel.Visible = true;
                 BitcoinRates newbitcoinrate = GetRates();
                 float result = float.Parse(bitcoinInput.Text) * (float)newbitcoinrate.Bpi.EUR.rate_float;
-                resultLabel.Text = $"{result} Bitcoini {newbitcoinrate.Bpi.EUR.code}";
+                if(bitcoinCurrency.Text.ToString() == "EEK")
+                {
+                    //1 eur = 15,6466 eek
+                    result *= (float)(15.6466);
+                    resultLabel.Text = $"{result} Bitcoini";
+                }
+                else
+                {
+                    resultLabel.Text = $"{result} Bitcoini {newbitcoinrate.Bpi.EUR.code}";
+                }
+               
             }
+            else if (bitcoinCurrency.Text.ToString() == "USD")
+            {
+                resultLabel.Visible = true;
+                tulemusLabel.Visible = true;
+                BitcoinRates newbitcoinrate = GetRates();
+                float result = float.Parse(bitcoinInput.Text) * (float)newbitcoinrate.Bpi.USD.rate_float;
+                resultLabel.Text = $"{result} Bitcoini {newbitcoinrate.Bpi.USD.code}";
+
+            }
+            else if (bitcoinCurrency.Text.ToString() == "GBP")
+            {
+                resultLabel.Visible = true;
+                tulemusLabel.Visible = true;
+                BitcoinRates newbitcoinrate = GetRates();
+                float result = float.Parse(bitcoinInput.Text) * (float)newbitcoinrate.Bpi.GBP.rate_float;
+                resultLabel.Text = $"{result} Bitcoini {newbitcoinrate.Bpi.GBP.code}";
+
+            }
+            else
+            {
+                MessageBox.Show("Kõik väljad polnud täidetud, palun täida need!");
+            }
+            
         }
     }
 }
